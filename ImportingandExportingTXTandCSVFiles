@@ -1,0 +1,18 @@
+"""reading data from TXT and CSV files"""
+import pandas
+
+import os
+os.chdir("C:\\CS")
+df1=pandas.read_csv("CommaSeparated.txt")
+df1.head()
+
+"""using spaces as a delineator"""
+df1=pandas.read_csv("CommaSeparated.txt", sep='\s+')
+
+"""exporting your data frames"""
+df1.to_csv("ColonSeparated.txt",  sep=':'")
+df1.to_csv("CommaSeparated.csv")
+
+"""importing with fixed width"""
+df2=pandas.read_fwf("FixedWidth.txt")
+
